@@ -5,25 +5,73 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="/zero">Repositorio Conicet</a>
-      <a mat-list-item href="/one">Repositorio UBA</a>
-      <a mat-list-item href="/two">Repositorio UNR</a>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Repositorios
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+          <a mat-list-item href="/zero">Conicet</a>
+          <a mat-list-item href="/one">UBA</a>
+          <a mat-list-item href="/two">UNR</a>
+          <a mat-list-item href="/three">UTN</a>
+          <a mat-list-item href="/four">FLACSO</a>
+          <a mat-list-item href="/five">UNAV</a>
+          <a mat-list-item href="/six">UNTREF</a>
+          <a mat-list-item href="/seven">UNLU</a>
+          <a mat-list-item href="/eigth">UNIPE</a>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Area Personal
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+          <a mat-list-item href="/zero">Conicet</a>
+          <a mat-list-item href="/one">UBA</a>
+          <a mat-list-item href="/two">UNR</a>
+          <a mat-list-item href="/three">UTN</a>
+          <a mat-list-item href="/four">FLACSO</a>
+          <a mat-list-item href="/five">UNAV</a>
+          <a mat-list-item href="/six">UNTREF</a>
+          <a mat-list-item href="/seven">UNLU</a>
+          <a mat-list-item href="/eigth">UNIPE</a>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Preferencias
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+          <a mat-list-item href="/zero">Conicet</a>
+          <a mat-list-item href="/one">UBA</a>
+          <a mat-list-item href="/two">UNR</a>
+          <a mat-list-item href="/three">UTN</a>
+          <a mat-list-item href="/four">FLACSO</a>
+          <a mat-list-item href="/five">UNAV</a>
+          <a mat-list-item href="/six">UNTREF</a>
+          <a mat-list-item href="/seven">UNLU</a>
+          <a mat-list-item href="/eigth">UNIPE</a>
+      </mat-expansion-panel>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>psicoSearch</span>
 
-    </mat-toolbar>
+
+      <mat-toolbar color="primary">
+        <span>Búsquedas Académicas</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button color="warn">Ingresar</button>
+        <button mat-raised-button color="accent">Registrarme</button>
+      </mat-toolbar>
+
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
+    <app-home></app-home>
+    <app-footer></app-footer>
   </mat-sidenav-content>
+
 </mat-sidenav-container>
