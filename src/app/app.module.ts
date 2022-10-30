@@ -1,5 +1,10 @@
-import { NgModule } from '@angular/core';
+import { StatisticsComponent } from './components/user/personal/dashboard/statistics/statistics/statistics.component';
+import { FullCalendarModule } from 'primeng/fullcalendar';
+import { DiaryComponent } from './components/user/personal/dashboard/diary/diary/diary.component';
+import { DashboardComponent } from './components/user/personal/dashboard/dashboard/dashboard.component';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,15 +23,16 @@ import { EigthComponent } from './components/pages/eigth/eigth.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/auth/login/login.component';
-import { RegisterFormComponent } from './components/auth/register-form/register-form.component';
-import { AboutProjectComponent } from './components/helper/about-project/about-project.component';
-import { AboutDashboardComponent } from './components/helper/about-dashboard/about-dashboard.component';
+import { AboutProjectComponent } from './components/helper/aboutProject/about-project.component';
+import { AboutDashboardComponent } from './components/helper/aboutDashboard/about-dashboard.component';
 import { AccountSetingsComponent } from './components/user/preferences/accountSettings/account-setings/account-setings.component';
 import { ProfileDataComponent } from './components/user/preferences/accountSettings/accountSetings/profile-data/profile-data.component';
 import { UserSettingsComponent } from './components/user/preferences/accountSettings/accountSetings/user-settings/user-settings.component';
-import { AccesibilityComponent } from './components/user/preferences/accountSettings/accountSetings/accesibility/accesibility.component';
-import { ContainerHelperComponent } from './helper/containerHelper/container-helper/container-helper.component';
-
+import { AccesibilityComponent } from './components/user/preferences/accesibility/accesibility/accesibility.component';
+import { ContainerHelperComponent } from './components/helper/containerHelper/container-helper/container-helper.component';
+import { GradesComponent } from './components/user/personal/dashboard/grades/grades/grades.component';
+import { rxjsModule } from './modules/rjxs';
+import { primengModule } from './modules/primeng';
 
 
 
@@ -46,7 +52,6 @@ import { ContainerHelperComponent } from './helper/containerHelper/container-hel
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    RegisterFormComponent,
     AboutProjectComponent,
     AboutDashboardComponent,
     AccountSetingsComponent,
@@ -54,13 +59,22 @@ import { ContainerHelperComponent } from './helper/containerHelper/container-hel
     UserSettingsComponent,
     AccesibilityComponent,
     ContainerHelperComponent,
+    DashboardComponent,
+    DiaryComponent,
+    GradesComponent,
+    StatisticsComponent,
   ],
+  entryComponents: [LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     angularMaterialModule,
+    rxjsModule,
+    FullCalendarModule,
+    primengModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

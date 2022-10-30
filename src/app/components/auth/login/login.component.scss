@@ -1,0 +1,37 @@
+#flex-container {
+  padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.example-card {
+  max-width: 400px;
+
+}
+
+.space {
+  width: 20%;
+}
+
+
+
+
+#btn-login {
+  color: white;
+  background-color: #43A547;
+}
+
+#btn-login-social {
+  width: 24px;
+}
+
+.example-spacer {
+  padding-left: 5em;
+}
+
+#btn-register {
+  color: white;
+  background-color: #FF4C1F;
+}
+

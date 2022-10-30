@@ -28,15 +28,28 @@
             Area Personal
           </mat-panel-title>
         </mat-expansion-panel-header>
-          <a mat-list-item href="/zero">Conicet</a>
-          <a mat-list-item href="/one">UBA</a>
-          <a mat-list-item href="/two">UNR</a>
-          <a mat-list-item href="/three">UTN</a>
-          <a mat-list-item href="/four">FLACSO</a>
-          <a mat-list-item href="/five">UNAV</a>
-          <a mat-list-item href="/six">UNTREF</a>
-          <a mat-list-item href="/seven">UNLU</a>
-          <a mat-list-item href="/eigth">UNIPE</a>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Dashboard
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+            <a mat-list-item href="/dashboard">Principal</a>
+            <a mat-list-item href="/diary">Agenda</a>
+            <a mat-list-item href="/zero">Historial</a>
+            <a mat-list-item href="/grades">Notas</a>
+            <a mat-list-item href="/statistics">Estadísticas</a>
+        </mat-expansion-panel>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Métodos / Aprendizaje
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+            <a mat-list-item href="/zero">Metodologías</a>
+            <a mat-list-item href="/one">Configurar</a>
+        </mat-expansion-panel>
+
       </mat-expansion-panel>
 
       <mat-expansion-panel hideToggle>
@@ -45,15 +58,26 @@
             Preferencias
           </mat-panel-title>
         </mat-expansion-panel-header>
-          <a mat-list-item href="/zero">Conicet</a>
-          <a mat-list-item href="/one">UBA</a>
-          <a mat-list-item href="/two">UNR</a>
-          <a mat-list-item href="/three">UTN</a>
-          <a mat-list-item href="/four">FLACSO</a>
-          <a mat-list-item href="/five">UNAV</a>
-          <a mat-list-item href="/six">UNTREF</a>
-          <a mat-list-item href="/seven">UNLU</a>
-          <a mat-list-item href="/eigth">UNIPE</a>
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Ajustes de Cuenta
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+              <a mat-list-item href="/zero">Perfil</a>
+              <a mat-list-item href="/one">Usuario</a>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Accesibilidad
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+              <a mat-list-item href="/zero">Perfil</a>
+              <a mat-list-item href="/one">Usuario</a>
+          </mat-expansion-panel>
       </mat-expansion-panel>
 
     </mat-nav-list>
@@ -63,9 +87,8 @@
 
       <mat-toolbar color="primary">
         <span>Búsquedas Académicas</span>
-        <span class="example-spacer"></span>
-        <button mat-raised-button color="warn">Ingresar</button>
-        <button mat-raised-button color="accent">Registrarme</button>
+
+
       </mat-toolbar>
 
     <!-- Add Content Here -->

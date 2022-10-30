@@ -1,3 +1,6 @@
+import { MatMenuModule } from '@angular/material/menu';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatRadioModule } from '@angular/material/radio';
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 
@@ -10,6 +13,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatOptionModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
+
 
 @NgModule({
   imports: [
@@ -25,7 +35,14 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatSlideToggleModule,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatOptionModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatDialogModule
   ]
 })
 

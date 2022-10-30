@@ -1,3 +1,7 @@
+import { StatisticsComponent } from './components/user/personal/dashboard/statistics/statistics/statistics.component';
+import { GradesComponent } from './components/user/personal/dashboard/grades/grades/grades.component';
+import { DiaryComponent } from './components/user/personal/dashboard/diary/diary/diary.component';
+import { LoginComponent } from './components/auth/login/login.component';
 import { EigthComponent } from './components/pages/eigth/eigth.component';
 import { SevenComponent } from './components/pages/seven/seven.component';
 import { SixComponent } from './components/pages/six/six.component';
@@ -9,6 +13,7 @@ import { ZeroComponent } from './components/pages/zero/zero.component';
 import { OneComponent } from './components/pages/one/one.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/user/personal/dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: 'zero', component: ZeroComponent},
@@ -20,6 +25,11 @@ const routes: Routes = [
   {path: 'six', component: SixComponent},
   {path: 'seven', component: SevenComponent},
   {path: 'eigth', component: EigthComponent},
+
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'diary', component: DiaryComponent},
+  {path: 'grades', component: GradesComponent},
+  {path: 'statistics', component: StatisticsComponent}
 
 ];
 
