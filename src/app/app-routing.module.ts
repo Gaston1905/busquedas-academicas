@@ -1,7 +1,8 @@
+import { HomeComponent } from './shared/home/home.component';
 import { StatisticsComponent } from './components/user/personal/dashboard/statistics/statistics/statistics.component';
 import { GradesComponent } from './components/user/personal/dashboard/grades/grades/grades.component';
 import { DiaryComponent } from './components/user/personal/dashboard/diary/diary/diary.component';
-import { LoginComponent } from './components/auth/login/login.component';
+
 import { EigthComponent } from './components/pages/eigth/eigth.component';
 import { SevenComponent } from './components/pages/seven/seven.component';
 import { SixComponent } from './components/pages/six/six.component';
@@ -26,7 +27,10 @@ const routes: Routes = [
   {path: 'seven', component: SevenComponent},
   {path: 'eigth', component: EigthComponent},
 
+  { path: 'home', component: HomeComponent},
+
   {path: 'dashboard', component: DashboardComponent},
+
   {path: 'diary', component: DiaryComponent},
   {path: 'grades', component: GradesComponent},
   {path: 'statistics', component: StatisticsComponent}

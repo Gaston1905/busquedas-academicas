@@ -15,6 +15,7 @@ export class NavComponent {
 
 @HostBinding('class') componentCssClass: any;
 
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),

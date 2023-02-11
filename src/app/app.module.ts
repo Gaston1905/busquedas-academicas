@@ -1,3 +1,6 @@
+
+import { LoginService } from './services/auth/login.service';
+import { InterceptorService } from './services/auth/interceptor.service';
 import { StatisticsComponent } from './components/user/personal/dashboard/statistics/statistics/statistics.component';
 import { FullCalendarModule } from 'primeng/fullcalendar';
 import { DiaryComponent } from './components/user/personal/dashboard/diary/diary/diary.component';
@@ -10,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { angularMaterialModule } from './modules/angularMaterial';
-import { NavComponent } from './components/nav/nav.component';
+
 import { ZeroComponent } from './components/pages/zero/zero.component';
 import { OneComponent } from './components/pages/one/one.component';
 import { TwoComponent } from './components/pages/two/two.component';
@@ -20,9 +23,6 @@ import { FiveComponent } from './components/pages/five/five.component';
 import { SixComponent } from './components/pages/six/six.component';
 import { SevenComponent } from './components/pages/seven/seven.component';
 import { EigthComponent } from './components/pages/eigth/eigth.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/auth/login/login.component';
 import { AboutProjectComponent } from './components/helper/aboutProject/about-project.component';
 import { AboutDashboardComponent } from './components/helper/aboutDashboard/about-dashboard.component';
 import { AccountSetingsComponent } from './components/user/preferences/accountSettings/account-setings/account-setings.component';
@@ -33,13 +33,14 @@ import { ContainerHelperComponent } from './components/helper/containerHelper/co
 import { GradesComponent } from './components/user/personal/dashboard/grades/grades/grades.component';
 import { rxjsModule } from './modules/rjxs';
 import { primengModule } from './modules/primeng';
+import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './auth/auth.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
     ZeroComponent,
     OneComponent,
     TwoComponent,
@@ -49,9 +50,6 @@ import { primengModule } from './modules/primeng';
     SixComponent,
     SevenComponent,
     EigthComponent,
-    FooterComponent,
-    HomeComponent,
-    LoginComponent,
     AboutProjectComponent,
     AboutDashboardComponent,
     AccountSetingsComponent,
@@ -64,7 +62,6 @@ import { primengModule } from './modules/primeng';
     GradesComponent,
     StatisticsComponent,
   ],
-  entryComponents: [LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -72,10 +69,15 @@ import { primengModule } from './modules/primeng';
     angularMaterialModule,
     rxjsModule,
     FullCalendarModule,
-    primengModule
+    primengModule,
+    SharedModule,
+    AuthModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [
+    InterceptorService,
+    LoginService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

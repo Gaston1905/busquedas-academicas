@@ -1,6 +1,7 @@
-import { LoginComponent } from './../auth/login/login.component';
+
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from 'src/app/auth/login/login.component';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ export class HomeComponent implements OnInit {
 
 
 
-  constructor( public dialog: MatDialog) { }
+  constructor( public dialog: MatDialog,
+    ) { }
 
   ngOnInit(): void {
   }

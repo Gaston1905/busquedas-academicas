@@ -5,7 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <mat-expansion-panel hideToggle>
+      <!-- <mat-expansion-panel hideToggle> -->
+        <mat-expansion-panel [expanded]="true" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             Repositorios
@@ -17,12 +18,11 @@
           <a mat-list-item href="/three">UTN</a>
           <a mat-list-item href="/four">FLACSO</a>
           <a mat-list-item href="/five">UNAV</a>
-          <a mat-list-item href="/six">UNTREF</a>
           <a mat-list-item href="/seven">UNLU</a>
           <a mat-list-item href="/eigth">UNIPE</a>
       </mat-expansion-panel>
 
-      <mat-expansion-panel hideToggle>
+      <!-- <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             Area Personal
@@ -50,9 +50,9 @@
             <a mat-list-item href="/one">Configurar</a>
         </mat-expansion-panel>
 
-      </mat-expansion-panel>
+      </mat-expansion-panel> -->
 
-      <mat-expansion-panel hideToggle>
+      <!-- <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             Preferencias
@@ -78,7 +78,7 @@
               <a mat-list-item href="/zero">Perfil</a>
               <a mat-list-item href="/one">Usuario</a>
           </mat-expansion-panel>
-      </mat-expansion-panel>
+      </mat-expansion-panel> -->
 
     </mat-nav-list>
   </mat-sidenav>
@@ -92,9 +92,9 @@
       </mat-toolbar>
 
     <!-- Add Content Here -->
+
     <router-outlet></router-outlet>
-    <app-home></app-home>
-    <app-footer></app-footer>
+
   </mat-sidenav-content>
 
 </mat-sidenav-container>

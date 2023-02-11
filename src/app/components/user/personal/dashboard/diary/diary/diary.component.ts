@@ -27,4 +27,28 @@ export class DiaryComponent implements OnInit {
     }
   };
 
+  calendarEvents: any[] = [
+    {
+      title: 'Event 1',
+      start: '2022-25-12',
+      end: '2022-28-12'
+    },
+    {
+      title: 'Event 2',
+      start: '2022-15-12',
+      end: '2022-16-12'
+    },
+    {
+      title: 'Event 3',
+      start: '2022-01-09',
+      end: '2022-01-10'
+    }
+  ];
+
+  filteredEvents: any[] = [];
+
+  updateFilter(filter: string) {
+    this.filteredEvents = this.calendarEvents.filter(event => event.title.includes(filter));
+  }
+
 }

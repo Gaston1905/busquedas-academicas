@@ -1,0 +1,20 @@
+{
+  "links": [
+    {
+      "name": "UNR",
+      "url": "https://ria.utn.edu.ar/"
+    },
+    {
+      "name": "UTN",
+      "url": "https://ria.utn.edu.ar/"
+    },
+    {
+      "name": "UNLU",
+      "url": "https://ri.unlu.edu.ar/xmlui/"
+    },
+    {
+      "name": "UNAJ",
+      "url": "https://biblio.unaj.edu.ar/cgi-bin/koha/opac-search.pl?advsearch=1&idx=kw&op=and&idx=kw&op=and&idx=kw&limit=branch%3ARID&sort_by=pubdate_dsc&do=Buscar"
+    }
+  ]
+}
